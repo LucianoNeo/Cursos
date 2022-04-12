@@ -3,4 +3,4 @@
 
 ##Gerar commit local
 -git add *
--git commit -m "commit inicial"
+-git commit -m "nome do commit"
