@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML</title>
+</head>
+<body>
+    <h1>Reproduzindo audio</h1>
+    <!-- <audio src="./midia/lofi.wav" controls autoplay></audio> /// Modelo padrão-->
+
+<audio preload="metadata" autoplay controls loop>
+<source src="midia/lofi.mp3" type="audio/mpeg">
+<source src="midia/lofi.wav" type="audio/wav">
+<p>Caso o navegador não consiga tocar o arquivo, clique <a href="midia/lofi.mp3">aqui</a>  para baixar</p>
+</audio>
+
+<h1>Imagens Dinâmicas</h1>
+
+<picture>
+    <source media="(max-width: 710px)" srcset="img/PEQUENA.png" type="image/png"> <!-- TAMANHO SEMPRE DO MENOR PRO MAIOR-->
+    <source media="(max-width: 1010px)" srcset="img/MEDIA.png" type="image/png">
+    <img src="./img/GRANDE.png" alt="imagem flexivel">
+</picture>
+
+
+
+
+</body>
+</html>

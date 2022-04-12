@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificação de país</title>
+    <style>
+body{
+    background-image: url("https://img.elo7.com.br/product/main/1E9DE1E/toppers-bandeiras-de-paises-selecao.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    background-color: white;
+    border-radius: 20px;
+    width: 400px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+
+}
+
+#res {
+    margin-top: 20px;;
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Informe seu país</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Enviar" onclick="mostrar()">
+    <div id="res"></div>
+</div>
+
+    <script>
+    
+
+function mostrar() {
+    var res = document.getElementById('res')
+    var elemento = document.getElementById('pais')
+    var país = elemento.value.toLowerCase()
+    
+    if(país == ""){
+                res.innerHTML='<strong>Vocé DEVE digitar um país</strong>'
+            }
+    else if (país != "brasil") {
+        res.innerText='Vocé é estrangeiro'
+    } 
+    else {
+        res.innerText='Vocé é brasileiro'
+            }
+}
+        
+            
+    </script>
+</body>
+</html>
