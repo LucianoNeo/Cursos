@@ -1,0 +1,11 @@
+const soma = (a, b) => a + b;
+console.log(soma(4, 6))
+// 10
+
+
+const soma2 = a => a;
+console.log(soma2(4))
+//4
+
+// !!! NÃO FAZ HOISTING , OU SEJA, TEM QUE SER DECLARADA ANTES DA CHAMADA !!!!
+
