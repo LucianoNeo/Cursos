@@ -62,3 +62,23 @@ function adicionaItemLista<NaoSei>(array:any[],value:NaoSei){
 }
 
 adicionaItemLista([1,2,3], 1)
+
+
+
+// CONDICIONAL A PARTIR DE PARAMETROS , NESTE CASO , REDIRECIONA CASO ELE POSSUA O PARAMENTRO CARGO
+interface IUsuario {
+    id: string
+    email: string
+}
+
+interface IAdmin extends IUsuario {
+    cargo: 'gerente' | 'coordenador' | 'supervisor'
+}
+
+function redirecione(usuario: IUsuario | IAdmin){
+    if('cargo' in usuario){
+//redirecionar para a area de admin
+    }
+    
+//redirecionar para a area de usuario
+}
