@@ -53,3 +53,12 @@ input.addEventListener('input', (event)=> {
     const i = event.currentTarget as HTMLInputElement
     console.log(i.value)
 })
+
+
+// GENERIC TYPES
+
+function adicionaItemLista<NaoSei>(array:any[],value:NaoSei){
+    return array.map(item => item + value)
+}
+
+adicionaItemLista([1,2,3], 1)
