@@ -1,3 +1,15 @@
+import $ from 'jquery'
+
+$.fn.extend({
+    novaFuncao(){
+        console.log('Chamou uma funcao')
+    }
+})
+
+$('body').novaFuncao()
+
+
+
 function soma(a: number,b: number){
     return a + b
 }
@@ -72,7 +84,7 @@ interface IUsuario {
 }
 
 interface IAdmin extends IUsuario {
-    cargo: 'gerente' | 'coordenador' | 'supervisor'
+    cargo?: 'gerente' | 'coordenador' | 'supervisor' // ? define parametro como OPCIONAL
 }
 
 function redirecione(usuario: IUsuario | IAdmin){

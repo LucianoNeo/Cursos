@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(71, 83, 250);
+}
+
+main {
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+   
+    width: 50vw;
+    background-color: rgb(242, 231, 218);
+    border-radius: 20px;
+    padding: 30px;
+}
