@@ -32,7 +32,7 @@ const Elemento1 =()=>{
 }
 // Renderização do componente chama-se com < componte />
 root.render(<Elemento1 />);
-```js
+```
 
 # Chamada de componente em arquivo externo.
 cria-se o arquivo com o nome do componente.jsx
@@ -48,4 +48,4 @@ function Button(params) {
 }
 
 export default Button
-```js
+```
