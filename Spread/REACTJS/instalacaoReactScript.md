@@ -29,4 +29,4 @@ const Elemento1 =()=>{
 }
 // Renderização do componente chama-se com < componte />
 root.render(<Elemento1 />);
-```JS
+```js
