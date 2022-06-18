@@ -12,6 +12,7 @@ public/index.html
 src/index.js
 
 # index.js basico Inicial
+```
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -28,3 +29,4 @@ const Elemento1 =()=>{
 }
 // Renderização do componente chama-se com < componte />
 root.render(<Elemento1 />);
+```JS
