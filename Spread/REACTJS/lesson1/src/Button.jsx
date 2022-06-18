@@ -1,8 +1,11 @@
 import React from "react";
 
-function Button(params) {
-    return(
+function Button(props) {
 
+    const { name, onClick} = props
+    
+    return(
+        <button onClick={onClick}>{name}</button>
     )
 }
 
