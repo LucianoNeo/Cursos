@@ -1,5 +1,5 @@
-# Naruto Quotes Client
-Naruto quotes generator client for DIO lesson.
+# CDZ Quotes Client
+Gerador de frases dos cavaleiros do zodiaco.
 
 ![screenshot](screenshot.png?raw=true "screenshot")
 
