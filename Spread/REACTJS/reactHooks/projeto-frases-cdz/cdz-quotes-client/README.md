@@ -1,7 +1,7 @@
 # CDZ Quotes Client
 Gerador de frases dos cavaleiros do zodiaco.
 
-![screenshot](screenshot.png?raw=true "screenshot")
+<img src='https://lucianoneo.github.io/Cursos/Spread/REACTJS/reactHooks/projeto-frases-cdz/Screenshot_1.jpg'/>
 
 # Install
 Clone this repository and install it dependencies with this command:
