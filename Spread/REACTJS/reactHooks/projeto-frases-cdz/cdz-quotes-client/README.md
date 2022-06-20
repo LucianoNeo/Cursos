@@ -1,20 +1,20 @@
-# Naruto Quotes Client
-Naruto quotes generator client for DIO lesson.
+# CDZ Quotes Client
+Gerador de frases dos cavaleiros do zodiaco.
 
-![screenshot](screenshot.png?raw=true "screenshot")
+<img src='https://lucianoneo.github.io/Cursos/Spread/REACTJS/reactHooks/projeto-frases-cdz/Screenshot_1.jpg'/>
 
-# Install
-Clone this repository and install it dependencies with this command:
+# Pré requisitos
+Instalar e rodar o servidor na maquina local. Disponível em: 
+https://github.com/LucianoNeo/Cursos/tree/master/Spread/REACTJS/reactHooks/projeto-frases-cdz/cdz-quotes-server
+
+# Instalação
+Clonar este repósitório e instalar as dependencias:
 ```sh
 $ npm install
 ```
 
-# Running
-Run the application with `npm start` command, it will start the app on [localhost:3000](http://localhost:3000):
+# Rodar
+Rode a aplicação com o comando `npm start`, o projeto poderá ser acessado através do link [localhost:3000](http://localhost:3000):
 ```sh
 $ npm start
 ```
-
-# License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-

@@ -1,18 +1,15 @@
-Naruto Quotes Api
+Frases CDZ Api
 ====================
-Simple app to generate random Naruto quotes using Python and Flask
+App para gerar frases de cavaleiros do zodiaco, usa Python and Flask
 
-# Running locally
-With Python and Pip installed, install the dependencies with:
+# Rodando localmente
+Com Python 3 e Pip instalados, instale as dependencias com:
 ```sh
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
-and finally run:
+e rode com :
 ```sh
 python3 app.py
 
 ```
-
-# License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
