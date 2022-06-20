@@ -32,9 +32,12 @@ font-size: 30px;
     }
 
     input{
-        background-color: blanchedalmond;
+        background-color: rgb(96, 82, 228);
         border: none;
         width: 20px;
         text-align: end;
         font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: large;
     }
