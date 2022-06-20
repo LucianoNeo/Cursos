@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid rgb(186, 174, 174);
+    width: 80px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 0 20px;
+
+}
+
+.buttonPlus{
+background-color: transparent;
+color: red;
+border: none;
+font-size: 25px;
+}
+
+.buttonMinus{
+background-color: transparent;
+color: red;
+border: none;
+font-size: 30px;
+}
+
+.buttonMinusDesactive{
+    background-color: transparent;
+    color: grey;
+    border: none;
+    font-size: 30px;
+    }

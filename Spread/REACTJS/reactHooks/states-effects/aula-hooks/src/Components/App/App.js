@@ -1,12 +1,13 @@
 import './App.css';
 import Counter from '../Counter/Counter';
 import { Fragment } from 'react';
+import IfoodCounter from '../IfoodCounter/IfoodCounter';
+
 
 function App() {
   return (
     <Fragment>
-    <h1>Hello World</h1>
-    <Counter />
+    <IfoodCounter />
     </Fragment>
   );
 }
