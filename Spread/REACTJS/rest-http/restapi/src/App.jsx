@@ -10,7 +10,7 @@ import LoadPokemon from './LoadPokemon'
 function App() {
  return (
  <div>
-  <h1>Pokedex do Neo</h1>
+  <h1>Pokédex do Neo</h1>
   <LoadPokemon />
  </div>
  )

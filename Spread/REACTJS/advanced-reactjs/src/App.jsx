@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ErrorBoundary from "../ErrorBoundary";
 
 
 class Twitter extends Component { 
@@ -11,11 +12,16 @@ class Twitter extends Component {
     console.log('componentDidMount')
   }
 
+
+
   render(){
     return(
+      <ErrorBoundary>
       <div>
         teste
       </div>
+      
+      </ErrorBoundary>
     )
   }
 }

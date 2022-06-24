@@ -31,7 +31,7 @@ const Card = styled.li`
     line-height: .4;
     &:hover {
       background-color: rgb(23, 62, 75);
-      transform: scale(1.2);
+      transform: scale(1.5);
       transition: 50ms ease-in;
     }
 `
@@ -42,18 +42,33 @@ const LoadPokemon = () => {
   const [pokemons, setPokemon] = useState([])
 
 
-  useEffect(()=>{
+  // useEffect(()=>{
+  //   async function puxaDados() {    
+  //     for (let i = 1; i <= 151; i++){
+  //     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+  //     const data = await response.json()
+  //     setPokemon(prevState=>[...prevState, data])
+  //   }
+    
+  // }
+  //   puxaDados()
+    
+  // },[])
+
+    useEffect(()=>{
     async function puxaDados() {    
       for (let i = 1; i <= 151; i++){
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-      const data = await response.json()
-      setPokemon(prevState=>[...prevState, data])
+      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`)
+      setPokemon(prevState=>[...prevState, response.data])
     }
     
   }
     puxaDados()
     
   },[])
+
+
+
   
 if (pokemons === null) return <></>
 
@@ -64,11 +79,10 @@ if (pokemons === null) return <></>
        {pokemons.map( (pokemon) => 
        <Card key={pokemon.id}>
           <p>ID: {pokemon.id}</p>
-          <p>Nome: {pokemon.name}</p>
+          <p>Nome: {pokemon.name.toUpperCase()}</p>
           <img src={pokemon.sprites.front_default} alt='' style={{margin: '0 auto'}}/>       
         </Card>
         )}
-        
     </Container>    
     
   )
