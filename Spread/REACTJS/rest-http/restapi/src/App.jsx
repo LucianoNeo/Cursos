@@ -1,5 +1,5 @@
 import react from 'react'
-import { LoadPokemon } from './LoadPokemon'
+import LoadPokemon from './LoadPokemon'
 
 
 
@@ -10,10 +10,8 @@ import { LoadPokemon } from './LoadPokemon'
 function App() {
  return (
  <div>
-  <h1>Lista de poké:</h1>
-  <ul>
-    <LoadPokemon />
-  </ul>
+  <h1>Pokedex do Neo</h1>
+  <LoadPokemon />
  </div>
  )
 }
