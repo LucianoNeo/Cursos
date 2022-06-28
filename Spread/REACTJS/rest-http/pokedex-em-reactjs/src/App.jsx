@@ -1,12 +1,11 @@
-import Busca from './Busca'
-import LoadPokemon from './LoadPokemon'
+
+import LoadPokemon from './components/LoadPokemon'
 
 
 function App() {
  return (
  <div>
-  <h1>Pokédex do Neo</h1>
-  <Busca />
+  <h1>Pokédex do Neo - 1ª geração</h1>
   <LoadPokemon />
  </div>
  )

@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import axios from 'axios';
 import { useEffect } from 'react';
 import React from 'react';
 import styled from 'styled-components'
+import Busca from './Busca';
+
 
 
 const Container = styled.ul`
@@ -40,8 +42,8 @@ const Card = styled.li`
 
 const LoadPokemon = () => {
   const [pokemons, setPokemon] = useState([])
-
-
+  const [busca, setBusca] = useState('')
+  
   // useEffect(()=>{
   //   async function puxaDados() {    
   //     for (let i = 1; i <= 151; i++){
@@ -49,42 +51,49 @@ const LoadPokemon = () => {
   //     const data = await response.json()
   //     setPokemon(prevState=>[...prevState, data])
   //   }
-    
+
   // }
   //   puxaDados()
-    
+
   // },[])
 
-    useEffect(()=>{
-    async function puxaDados() {    
-      for (let i = 1; i <= 151; i++){
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`)
-      setPokemon(prevState=>[...prevState, response.data])
+  useEffect(() => {
+    async function puxaDados() {
+      for (let i = 1; i <= 151; i++) {
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`)
+        setPokemon(prevState => [...prevState, response.data])
+      }
+
     }
-    
-  }
     puxaDados()
-    
-  },[])
 
-
+  }, [])
 
   
-if (pokemons === null) return <></>
+  if (pokemons === null) return <></>
 
+
+  const filtrados = useMemo(()=> {
+   return pokemons.filter((filtrado)=> filtrado.name.toLowerCase().includes(busca.toLowerCase()))
+  },[,pokemons,busca]) 
 
   return (
-    
+    <>
+    <Busca value={busca}
+    onChange={(ev) => setBusca(ev.target.value)}
+    placeholder='Digite o nome do pokémon para filtrar'/>
+  
     <Container>
-       {pokemons.map( (pokemon) => 
-       <Card key={pokemon.id}>
+      
+      {filtrados.map((pokemon) =>
+        <Card key={pokemon.id}>
           <p>ID: {pokemon.id}</p>
           <p>Nome: {pokemon.name.toUpperCase()}</p>
-          <img src={pokemon.sprites.front_default} alt='' style={{margin: '0 auto'}}/>       
+          <img src={pokemon.sprites.front_default} alt='' style={{ margin: '0 auto' }} />
         </Card>
-        )}
-    </Container>    
-    
+      )}
+    </Container>
+    </>
   )
   
 }
