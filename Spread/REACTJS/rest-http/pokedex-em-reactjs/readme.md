@@ -7,7 +7,7 @@
 
 
 - Se alimenta da api https://pokeapi.co/api/v2/pokemon para trazer os dados de cada pokémon da primeira geração
-- Renderiza na tela todos os pokémon mostrando o id, nome e imagem.
+- Renderiza na tela todos os pokémon mostrando o id, nome e sprite. 
 - Possui um input para filtragem dos pokémon por nome.
 
 ## Instalação
