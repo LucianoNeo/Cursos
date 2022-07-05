@@ -1,0 +1,4 @@
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"title":"titulo","content":"conteudo","author":"neo"}' \
+  http://localhost:3000/posts
