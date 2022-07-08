@@ -11,6 +11,6 @@ app.use(bodyParser.urlencoded({extended: false}))
 userRoute(app)
 
 
-app.get('/', (req,res)=> res.send('olá mundo pelo Express!'))
+app.get('/', (req,res)=> res.send('Seja bem vindo à primeira API do LucianoNeo'))
 
 app.listen(port, ()=> console.log('API rodando na porta 3000'))
