@@ -11,11 +11,11 @@ const config = {
 }
 
 mongoose.connection.on('open', () => {
-  console.log('Successfully connected to database.')
+  console.log('Conectado ao banco com sucesso.')
 })
 
 mongoose.connection.on('error', () => {
-  throw new Error('Could not connect to MongoDB.')
+  throw new Error('Não foi possível conectar ao MongoDB.')
 })
 
 export default {

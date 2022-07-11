@@ -20,7 +20,7 @@ class UsersController {
             return { users }
             
         } catch (error) {
-            return Boom.badRequest('Failed to find user')
+            return Boom.badRequest('Usuário não encontrado')
         }
     }
 
@@ -50,7 +50,7 @@ class UsersController {
                 return h.response().code(200)
             }
 
-            return Boom.badRequest('Could not update the user')
+            return Boom.badRequest('Não foi possível alterar o usuario')
 
             
         } catch (error) {
