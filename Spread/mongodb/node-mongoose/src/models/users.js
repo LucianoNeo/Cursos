@@ -1,26 +1,34 @@
-import Mongoose from 'mongoose'
+const mongoose = require('mongoose')
+const bcrypt = require('bcrypt')
 
-const schema = new Mongoose.Schema({
-    firstName: String,
-    lastName: String,
-    email: {
-        type: String,
-        required: [true, 'Email is required'],
-        unique: true,
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
-    },
+const schema = new mongoose.Schema({
+    username: String,
+    password: String,
+    email: String,
+
 }, {
-    timestamps: { createdAt: true, updatedAt: true },
-    toJSON: { 
-        virtuals: true,
-        transform(doc, ret) {
-            ret.id = ret._id
-            delete ret._id
-          }
-    },
-    versionKey: false,
+    timestamps: true,
 })
 
-const UsersModel = Mongoose.model('Users', schema)
 
-export default UsersModel
+schema.pre('save', function (next) {
+    if (!this.isModified('password')) {
+        return next()
+    }
+    this.password = bcrypt.hashSync(this.password, 10)
+    next()
+})
+
+schema.pre('findOneAndUpdate', function (next) {
+    let password = this.getUpdate().password+''
+    if(password.length<55){
+        this.getUpdate().password = bcrypt.hashSync(password,10)
+    }
+    next()
+})
+
+
+
+const usuarios = mongoose.model('Usuario', schema)
+
+module.exports = usuarios
