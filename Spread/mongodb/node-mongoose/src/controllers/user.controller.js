@@ -31,7 +31,7 @@ module.exports = {
         return res.json(user)
     },
     async update(req, res) {
-        const { _id, username, email, password } = req.body
+        const { _id, username, email, password, pokemonBag } = req.body
 
         const data = { username, email, password }
 
