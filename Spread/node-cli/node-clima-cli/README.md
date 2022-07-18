@@ -37,10 +37,3 @@ ou
 
 O token só precisa ser informado uma vez e ele será armazenado localmente. Se precisar atualizar o token, basta informá-lo novamente usando o mesmo parâmetro.
 
-Você pode gerar o token [aqui](https://advisor.climatempo.com.br).
-f704add042b7dd5271955af3d72ea9ca
-## Bônus - Ganhe até R$100 pra testar a hospedagem da Umbler!
-Está procurando uma hospedagem bacana pra testar e até mesmo publicar tuas aplicações, sites e afins em alguns segundos? É só acessar [este link](http://bit.ly/CreditosNaUmbler) e ganhe até R$100 pra testar o serviço. 
-
-## Observações
-Este código faz parte do curso **_Desenvolvendo ferramentas de linha de comando em Node.js_** na [Digital Inovation One](https://digitalinnovation.one).
